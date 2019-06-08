@@ -30,7 +30,7 @@
 .tagspro:hover 
 { margin-right: 30px }
 
-.tagspro:hover .count 
+.tagspro:hover .tags_count 
 { right: -40px }
 .tags_count {
      position: absolute;
@@ -68,10 +68,4 @@
      z-index: 2;
      right: -1px;
      border-right-color: #f8f8f8;
-}
- a:hover {
-     margin-right: 30px 
-}
- a:hover .tags_count {
-     right: -40px 
 }
