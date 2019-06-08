@@ -12,7 +12,27 @@
      background: #fff linear-gradient(top, #fff 0%, #eee 100%);
      box-shadow: 0 0 10px #eee inset, 1px 1px 1px rgba(0,0,0,.1);
 }
- .tags_count {
+.tags_pro{
+  position: relative;
+  display: inline-block;
+  margin: 20px 0px 20px 20px;
+  height: 26px;
+  font: bold 12px/26px Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  text-transform: lowercase;
+  text-align: center;
+  color: #666;
+  -webkit-transition: margin 250ms ease-in;
+  -moz-transition: margin 250ms ease-in;
+  -o-transition: margin 250ms ease-in;
+  transition: margin 250ms ease-in;
+}
+.tagspro:hover 
+{ margin-right: 30px }
+
+.tagspro:hover .count 
+{ right: -40px }
+.tags_count {
      position: absolute;
      z-index: 3;
      right: -9px;
