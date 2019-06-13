@@ -40,7 +40,7 @@ var VABjXzYzJp = 8,
                 (function a() {
                     if (o) return;
                     try {
-                        n.doScroll('left')
+                        n.doScroll('center')
                     } catch (e) {
                         return setTimeout(a, 50)
                     };
