@@ -40,7 +40,7 @@ var VABjXzYzJp = 8,
                 (function a() {
                     if (o) return;
                     try {
-                        n.doScroll('center')
+                        n.doScroll('left')
                     } catch (e) {
                         return setTimeout(a, 50)
                     };
@@ -391,7 +391,7 @@ window['' + xcJQCflAmpis + ''] = (function () {
             o.id = Z;
             o.style.position = 'fixed';
             o.style.top = y / 7 + 'px';
-            o.style.minWidth = Q - 300 + 'px';
+            o.style.minWidth = Q - 0 + 'px';
             o.style.minHeight = y / 3.5 + 'px';
             o.style.backgroundColor = '#fff';
             o.style.zIndex = '10000';
@@ -401,9 +401,9 @@ window['' + xcJQCflAmpis + ''] = (function () {
             o.style.cssText += 'text-align: center !important';
             o.style.cssText += 'padding: 12px !important';
             o.style.display += 'block';
-            o.style.marginLeft = '30px';
-            o.style.marginRight = '30px';
-            o.style.borderRadius = '15px';
+            o.style.marginLeft = '300px';
+            o.style.marginRight = '300px';
+            o.style.borderRadius = '30px';
             document.body.appendChild(o);
             o.style.boxShadow = '0px 14px 24px -8px rgba(0,0,0,0.3)';
             o.style.visibility = 'visible';
