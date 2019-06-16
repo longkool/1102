@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<style type='text/css'>
+/* Breaking News */
+#breakingwrapper{position:relative;background-color:#fff;color:#ccc;display:block;margin:20px auto 0 auto;overflow:hidden;border-radius:5px;box-shadow:0 2px 3px -2px rgba(0,0,0,0.1)}#breakingnews{width:100%;max-width:990px;display:block;margin:0 auto;line-height:42px;height:42px;overflow:hidden;font-size:13px;padding:0}#breakingnews .tulisbreaking{background:#e74c3c;color:#fff;display:block;padding:0 15px;font-size:13px;font-weight:600;height:28px;line-height:28px;float:left;margin:7px 14px 0 7px;text-align:center;border-radius:3px}#recentbreaking{float:left;margin:0;font-size:13px;color:#222;font-weight:600}#recentbreaking ul,#recentbreaking li{list-style:none;margin:0;padding:0}#recentbreaking li a{color:#222}#recentbreaking li a:hover{color:#222;text-decoration:underline}.blog-date{display:inline-block;float:right;margin:0 20px 0 0;font-size:13px;border-radius:2px;cursor:pointer}#recentbreaking li i{margin:0 10px 0 0}
+@media screen and (max-width:768px) {
+#breakingwrapper{background-color:#e74c3c;color:#fff;margin:10px auto 20px auto;border-radius:0}#breakingnews{padding:0 20px;color:#fff;overflow:hidden;text-overflow:ellipsis}#recentbreaking{color:#fbc531;text-align:center;float:none;margin:0 auto}#breakingnews .tulisbreaking .breakhidden,#breakingnews .tulisbreaking{display:none}#recentbreaking li a,#recentbreaking li a:hover{color:#fff}}
+</style>
+</head>
+<body>
+
+<div id='breakingwrapper'>
+   <div id='breakingnews'>
+     <span class='tulisbreaking'>News Update<span class='breakhidden'/></span>
+      <div id='recentbreaking'>Loading...</div>
+      <div class='blog-date'>
+         <script language='Javascript'>
+            var dayName = new Array(&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;);
+            var monName = new Array(&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;);
+            var now = new Date();
+            document.write(&quot;&quot; + &quot; &quot; + dayName[now.getDay()] + &quot;,&quot; + &quot; &quot; + now.getDate() + &quot; &quot; + monName[now.getMonth()] + &quot;&quot;);
+         </script>
+      </div>
+   </div>
+</div>
+<div class='clear'/>
+
+<script type='text/javascript'>
+//<![CDATA[
+// Breaking News
+$(document).ready(function(){var e="https://www.receh.info/",t=10;$.ajax({url:""+e+"/feeds/posts/default?alt=json-in-script&amp;max-results="+t,type:"get",dataType:"jsonp",success:function(e){function t(){$("#recentbreaking li:first").slideUp(function(){$(this).appendTo($("#recentbreaking ul")).slideDown()})}var n,r,a="",i=e.feed.entry;if(void 0!==i){a="<ul>";for(var l=0;l<i.length;l++){for(var s=0;s<i[l].link.length;s++)if("alternate"==i[l].link[s].rel){n=i[l].link[s].href;break}r=i[l].title.$t,a+='<li><i class="fa fa-check-square"></i><a href="'+n+'" target="_blank">'+r+"</a></li>"}a+="</ul>",$("#recentbreaking").html(a),setInterval(function(){t()},5e3)}else $("#recentbreaking").html("<span>There nothing here?</span>")},error:function(){$("#recentbreaking").html("<strong>Error Loading Feed!</strong>")}})});
+//]]>
+</script>
+</body>
+</html>
