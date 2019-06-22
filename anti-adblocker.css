@@ -38,7 +38,7 @@ background-position: 0% 50%
 .adblockInfo__container,.adblockInfo__title{position:relative;z-index:99996}
 .adblockInfo__title{padding:1em 2em;font-size:1.2em;margin:0}
 .adblockInfo__text{padding: 1em; font-size: 1em; line-height: 2; text-align: center;}
-.adblockInfo__cover__img { width: 100px; max-width: 100px; max-height: 100px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; border: 5px solid rgba(255,255,255,0.5); top: 65%; position: relative; z-index: 99998;}
+.adblockInfo__cover__img { width: 100px; max-width: 100px; max-height: 100px; -webkit-border-radius: 0%; -moz-border-radius: 0%; border-radius: 0%; border: 5px solid rgba(255,0,0,0); top: 65%; position: relative; z-index: 99998;}
 @media (max-width:500px){.adblockInfo__container{left:0;right:0;width:100%}}
 .adblockInfo {
 background: rgba(0, 0, 0, 0.95);
